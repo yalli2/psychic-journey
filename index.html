@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MindGauge · 마음의 눈금</title>
+<meta name="description" content="HR을 위한 심리검사 설계·평가 워크숍. 12개 챕터를 함께 응답하고 결과를 실시간으로 비교합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="#/"><b>마음의 눈금</b><span>MindGauge</span></a>
+    <span class="mode" id="mode"></span>
+    <button class="icon-btn" id="theme" aria-label="밝게/어둡게 전환" title="밝게/어둡게">◐</button>
+  </div>
+  <nav class="ruler" id="ruler" aria-label="챕터"></nav>
+</header>
+<main id="main" class="main"></main>
+<dialog id="entry">
+  <form method="dialog" id="entry-form">
+    <h3>입장하기</h3>
+    <p class="muted">별명을 쓰고, 진행자가 알려 준 방 코드를 입력하세요. 같은 코드를 쓴 사람끼리 결과가 공유됩니다. 체험은 <b>demo</b>.</p>
+    <label for="en-name">별명</label><input id="en-name" maxlength="12" autocomplete="off" required>
+    <label for="en-room">방 코드 (영문·숫자·한글 20자 이내)</label><input id="en-room" maxlength="20" autocomplete="off" required>
+    <div class="row end"><button type="button" class="btn ghost" id="entry-cancel">닫기</button><button class="btn" type="submit">입장</button></div>
+  </form>
+</dialog>
+<script src="config.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/core.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/m00-inventory.js"></script>
+<script src="js/m01-04.js"></script>
+<script src="js/m05-08.js"></script>
+<script src="js/m09-12.js"></script>
+<script>boot();</script>
+</body>
+</html>
